@@ -1,0 +1,102 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffe5b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s;
+}
+
+.card {
+    background: #f5f5dc;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 2s ease-in;
+}
+
+.buddha-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+button {
+    margin: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#changeFontBtn {
+    background-color: #ffcccb;
+}
+
+#changeBgColorBtn {
+    background-color: #ffb6c1;
+}
+
+#newQuoteBtn {
+    background-color: #ffc3a0;
+}
+
+#infoBtn {
+    background-color: #ffa07a;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 15px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
